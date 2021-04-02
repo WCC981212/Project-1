@@ -9,13 +9,14 @@ import ContactPage from './pages/ContactPage';
 import { useState } from 'react';
 
 function App() {
+  const rootaddress = '/Project-1';
   const [navToggle, setNavToggle] = useState(false);
   const navClick = () => {
     setNavToggle(!navToggle);
   };
   return (
     <div className='App'>
-      <div className={`sidebar ${navToggle ? 'nav-toggle':''}`}>
+      <div className={`sidebar ${navToggle ? 'nav-toggle' : ''}`}>
         <NavBar />
       </div>
       <div className='nav-btn' onClick={navClick}>
@@ -26,19 +27,19 @@ function App() {
       <div className='main-content'>
         <div className='content'>
           <Switch>
-            <Route path='/' exact>
+            <Route path={`${rootaddress}/`} exact>
               <HomePage />
             </Route>
-            <Route path='/about' exact>
+            <Route path={`${rootaddress}/about`} exact>
               <AboutPage />
             </Route>
-            <Route path='/portfolios' exact>
+            <Route path={`${rootaddress}/portfolios`} exact>
               <PortfoliosPage />
             </Route>
-            <Route path='/blogs' exact>
+            <Route path={`${rootaddress}/blogs`} exact>
               <BlogsPage />
             </Route>
-            <Route path='/contact' exact>
+            <Route path={`${rootaddress}/contact`} exact>
               <ContactPage />
             </Route>
           </Switch>

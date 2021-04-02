@@ -2,8 +2,8 @@ import React from 'react';
 import avatar from '../img/avatar.jpg';
 import { NavLink } from 'react-router-dom';
 
-
 function NavBar() {
+  const rootaddress = '/Project-1';
   return (
     <div className='NavBar'>
       <nav className='nav'>
@@ -12,27 +12,27 @@ function NavBar() {
         </div>
         <ul className='nav-items'>
           <li className='nav-item'>
-            <NavLink to='/' exact activeClassName='active'>
+            <NavLink to={`${rootaddress}/`} exact activeClassName='active'>
               Home
             </NavLink>
           </li>
           <li className='nav-item'>
-            <NavLink to='/about' exact activeClassName='active'>
+            <NavLink to={`${rootaddress}/about`} exact activeClassName='active'>
               About
             </NavLink>
           </li>
           <li className='nav-item'>
-            <NavLink to='/portfolios' exact activeClassName='active'>
+            <NavLink to={`${rootaddress}/portfolios`} exact activeClassName='active'>
               Portfolios
             </NavLink>
           </li>
           <li className='nav-item'>
-            <NavLink to='/blogs' exact activeClassName='active'>
+            <NavLink to={`${rootaddress}/blogs`} exact activeClassName='active'>
               Blogs
             </NavLink>
           </li>
           <li className='nav-item'>
-            <NavLink to='/contact' exact activeClassName='active'>
+            <NavLink to={`${rootaddress}/contact`} exact activeClassName='active'>
               Contact
             </NavLink>
           </li>
